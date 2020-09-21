@@ -1,0 +1,61 @@
+.Post {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #272b30;
+    border-radius: 10px;
+}
+
+.Post:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.PostInfo {
+    position: relative;
+    margin: 0 15px 20px 15px;
+}
+
+.PostInfo h3 {
+    margin-bottom: 0;
+}
+
+.PostInfo span {
+    font-size: 12px;
+    color: #818181;
+}
+
+.EllipsisButton {
+    position: absolute;
+    right: 20px;
+    top: 20%;
+    transform: translateY(-20%);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.EllipsisButton::after {
+    content: '\f141';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color: #818181;
+    font-family: FontAwesome, sans-serif;
+    font-size: 22px;
+}
+
+.Post img {
+    width: 100%;
+}
+
+.PostContent {
+    margin: 0 15px 15px 15px;
+}
+
+.PostContent p {
+    font-size: 25px;
+}

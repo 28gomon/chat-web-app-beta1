@@ -1,0 +1,124 @@
+.Header {
+    position: relative;
+}
+
+.HeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    width: 100%;
+    height: 80px;
+}
+
+.Logo {
+    width: 320px;
+    height: 100%;
+}
+
+.Logo a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80px;
+    height: 100%;
+    color: #e9e9e9;
+    font-size: 40px;
+}
+
+.SearchPanel {
+    width: 100%;
+    height: 45px;
+}
+
+.SearchPanel > div {
+    position: relative;
+    height: 100%;
+}
+
+.SearchPanel > div input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #434343;
+    background: transparent;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 15px;
+    font-size: 20px;
+    color: #e9e9e9;
+    transition: all .25s ease-in;
+}
+
+.SearchPanel > div input:hover {
+    border: 1px solid #5d5d5d;
+}
+
+.SearchPanel > div input:active, .SearchPanel > div input:focus {
+    border: 1px solid #e9e9e9;
+}
+
+.SearchPanel > div button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.SearchPanel > div button::before {
+    content: '\f002';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: FontAwesome, sans-serif;
+    color: #434343;
+}
+
+.InformationBlock {
+    width: 420px;
+    height: 100%;
+}
+
+.InformationBlock > div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.Bell, .Settings {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.Bell::before {
+    content: '\f0f3';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 22px;
+    color: #e9e9e9;
+    font-family: FontAwesome, sans-serif;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.Settings::before {
+    content: '\f013';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 22px;
+    color: #e9e9e9;
+    font-family: FontAwesome, sans-serif;
+    transform: translateY(-50%) translateX(-50%);
+}
