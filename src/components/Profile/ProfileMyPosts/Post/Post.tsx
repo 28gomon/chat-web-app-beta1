@@ -1,8 +1,10 @@
 import React from "react";
 import classes from "./Post.module.css";
 import {Button} from "../../../UI/Button/Button";
+import {PostType} from "../../../../types/types";
 
-export const Post = () => {
+
+export const Post: React.FC<PostType> = ({id, message,  likesCount}) => {
 	return (
 		<div className={classes.Post}>
 			<div className={classes.PostInfo}>
@@ -16,9 +18,9 @@ export const Post = () => {
 				src="https://www.alvinailey.org/sites/default/files/styles/slideshow_image/public/melanie-person.jpg?itok=ocw3xkx_"
 				alt=""/>
 			<div className={classes.PostContent}>
-				<p>Post text</p>
+				<p>{message}</p>
 				<div>
-					<span>Нравится: <b>12</b></span>
+					<span>Нравится: <b>{likesCount}</b></span>
 				</div>
 			</div>
 		</div>

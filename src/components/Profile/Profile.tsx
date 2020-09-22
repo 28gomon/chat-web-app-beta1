@@ -1,7 +1,7 @@
 import React from "react";
 import classes from './Profile.module.css';
 import {ProfileInfo} from "./ProfileInfo/ProfileInfo";
-import {ProfileMyPosts} from "./ProfileMyPosts/ProfileMyPosts";
+import {ProfileMyPostsContainer} from "./ProfileMyPosts/ProfileMyPostsContainer";
 
 export const Profile = () => {
 	return (
@@ -11,7 +11,7 @@ export const Profile = () => {
 			<ProfileInfo/>
 
 			{/* ProfileMyPostsContainer */}
-			<ProfileMyPosts/>
+			<ProfileMyPostsContainer/>
 
 		</div>
 	)
