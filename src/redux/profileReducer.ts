@@ -2,10 +2,10 @@ import {ADD_POST, CHANGE_POST_TEXT, ProfilePageActionTypes, ProfilePageType} fro
 
 const initialState: ProfilePageType = {
 	posts: [
-		{id: 1, message: "Hello World", likesCount: 2},
-		{id: 2, message: "Hi, how are you?", likesCount: 12},
-		{id: 3, message: "Ok!", likesCount: 5},
-		{id: 4, message: "Not", likesCount: 15},
+		{id: 1, message: "Post 4", likesCount: 2},
+		{id: 2, message: "Post 3", likesCount: 12},
+		{id: 3, message: "Post 2", likesCount: 5},
+		{id: 4, message: "Post 1", likesCount: 15},
 	],
 	changeText: ''
 };
@@ -20,13 +20,13 @@ export const profileReducer = (state = initialState, action: ProfilePageActionTy
 				likesCount: 0
 			}
 			return {
-				...state, posts: [...state.posts, newPost], changeText: ''
-			}
+				...state, posts: [newPost, ...state.posts], changeText: ''
+			};
 
 		case CHANGE_POST_TEXT:
 			return {
 				...state, changeText: action.postText.trim() !== '' ? action.postText : ''
-			}
+			};
 
 		default:
 			return state;

@@ -8,6 +8,7 @@ export const Sidebar = () => {
 			<div className={classes.Nav}>
 				<div><NavLink to={'/profile'} activeClassName={classes.Active}>Profile</NavLink></div>
 				<div><NavLink to={'/dialogs'} activeClassName={classes.Active}>Dialogs</NavLink></div>
+				<div><NavLink to={'/users'} activeClassName={classes.Active}>Users</NavLink></div>
 				<div><NavLink to={'/settings'} activeClassName={classes.Active}>Settings</NavLink></div>
 			</div>
 		</div>

@@ -6,6 +6,7 @@ import {Sidebar} from "./components/Sidebar/Sidebar";
 import { Switch, Route, Redirect } from 'react-router-dom';
 import {Profile} from "./components/Profile/Profile";
 import {Dialogs} from "./components/Dialogs/Dialogs";
+import {Users} from "./components/Users/Users";
 
 export const App = () => {
 	return (
@@ -18,8 +19,18 @@ export const App = () => {
 					<Sidebar/>
 
 					<Switch>
-						<Route path={'/profile'} render={() => <Profile/>} />
-						<Route path={'/dialogs'} render={() => <Dialogs/>} />
+						<Route
+							path={'/profile'}
+							render={() => <Profile/>}
+						/>
+						<Route
+							path={'/dialogs'}
+							render={() => <Dialogs/>}
+						/>
+						<Route
+							path={'/users'}
+							render={() => <Users/>}
+						/>
 						<Route path={'/'} render={() => <Redirect to={'/profile'}/>} />
 					</Switch>
 				</div>
