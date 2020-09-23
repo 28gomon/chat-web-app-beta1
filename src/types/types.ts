@@ -1,7 +1,12 @@
 import {addNewPostActionCreator, changeTextActionCreator} from "../redux/profileReducer";
+import {followActionCreator, setUsersActionCreator, unfollowActionCreator} from "../redux/users-reducer";
 
 export const ADD_POST = 'profile-page/ADD-POST';
 export const CHANGE_POST_TEXT = 'profile-page/CHANGE-POST-TEXT';
+
+export const FOLLOW_USER = 'users/FOLLOW-USER';
+export const UNFOLLOW_USER = 'users/UNFOLLOW-USER';
+export const SET_USERS = 'users/SET-USERS';
 
 // profilePage
 export type PostType = {
@@ -32,10 +37,15 @@ export type UserType = {
 	lastName: string
 	status: string
 	followed: boolean
+	photoUrl: string
 	location: UserLocationType
 };
 
 export type UsersType = {
 	users: Array<UserType>
 };
+
+export type UsersPageActionType = ReturnType<typeof followActionCreator>
+	| ReturnType<typeof unfollowActionCreator>
+	| ReturnType<typeof setUsersActionCreator>;
 // usersPage
