@@ -41,6 +41,7 @@
     width: 100px;
     white-space: normal;
     text-align: center;
+    transition: background-color .25s ease-in;
 }
 
 .UnFollow {

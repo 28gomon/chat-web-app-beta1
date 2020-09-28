@@ -1,31 +1,27 @@
 import {FOLLOW_USER, SET_USERS, UNFOLLOW_USER, UsersPageActionType, UsersType} from "../types/types";
-
+// https://social-network.samuraijs.com/api/1.0/
 const initialState: UsersType = {
 	users: [
-		{
-			id: 1,
-			name: 'Alexandr',
-			lastName: 'Homan',
-			status: 'Learn ReactJS',
-			followed: false,
-			photoUrl: 'https://www.alvinailey.org/sites/default/files/styles/slideshow_image/public/melanie-person.jpg?itok=ocw3xkx_',
-			location: {
-				city: 'Minsk',
-				country: 'Belarus'
-			}
-		},
-		{
-			id: 2,
-			name: 'Alexandr',
-			lastName: 'Homan',
-			status: 'Learn ReactJS',
-			followed: false,
-			photoUrl: 'https://www.alvinailey.org/sites/default/files/styles/slideshow_image/public/melanie-person.jpg?itok=ocw3xkx_',
-			location: {
-				city: 'Minsk',
-				country: 'Belarus'
-			}
-		}
+		// {
+		// 	id: 1,
+		// 	name: 'Alexandr Homan',
+		// 	status: 'Learn ReactJS',
+		// 	followed: false,
+		// 	photos: {
+		// 		small: 'https://www.alvinailey.org/sites/default/files/styles/slideshow_image/public/melanie-person.jpg?itok=ocw3xkx_',
+		// 		large: 'https://www.alvinailey.org/sites/default/files/styles/slideshow_image/public/melanie-person.jpg?itok=ocw3xkx_'
+		// 	}
+		// },
+		// {
+		// 	id: 2,
+		// 	name: 'Alexandr Homan',
+		// 	status: 'Learn ReactJS',
+		// 	followed: false,
+		// 	photos: {
+		// 		small: 'https://www.alvinailey.org/sites/default/files/styles/slideshow_image/public/melanie-person.jpg?itok=ocw3xkx_',
+		// 		large: 'https://www.alvinailey.org/sites/default/files/styles/slideshow_image/public/melanie-person.jpg?itok=ocw3xkx_'
+		// 	}
+		// }
 	]
 };
 

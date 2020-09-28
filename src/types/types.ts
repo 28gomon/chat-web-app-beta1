@@ -26,19 +26,17 @@ export type ChangeTextActionType = ReturnType<typeof changeTextActionCreator>;
 // profilePage
 
 // usersPage
-export type UserLocationType = {
-	city: string
-	country: string
-};
+export type UserPhotoType = {
+	small: string
+	large: string
+}
 
 export type UserType = {
 	id: number
 	name: string
-	lastName: string
 	status: string
 	followed: boolean
-	photoUrl: string
-	location: UserLocationType
+	photos: UserPhotoType
 };
 
 export type UsersType = {

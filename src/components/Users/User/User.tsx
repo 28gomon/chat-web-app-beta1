@@ -2,6 +2,7 @@ import React from "react";
 import classes from './User.module.css';
 import {UserType} from "../../../types/types";
 import {Button} from "../../UI/Button/Button";
+import userAvatar from '../../../assets/img/no-avatar.png';
 
 type UserItemType = {
 	users: Array<UserType>
@@ -24,9 +25,11 @@ export const User: React.FC<UserItemType> = (
 							<div className={classes.LeftBox}>
 								<div
 									className={classes.UserAvatar}
-									style={{
-										backgroundImage: `url(${user.photoUrl})`
-									}}
+									// style={{
+									// 	backgroundImage: `url(${user.photos.small
+									// 		? user.photos.small
+									// 		: userAvatar})`
+									// }}
 								/>
 								{/*<img src={user.photoUrl} alt={user.name + ' ' + user.lastName}/>*/}
 
@@ -45,11 +48,11 @@ export const User: React.FC<UserItemType> = (
 								</span>
 							</div>
 							<div className={classes.RightBox}>
-								<h2>{user.name} {user.lastName}</h2>
+								<h2>{user.name}</h2>
 								<p>{user.status}</p>
 								<div className={classes.Location}>
-									<b>{user.location.country}:</b>
-									<span>{user.location.city}</span>
+									<b>Belarus:</b>
+									<span>Minsk</span>
 								</div>
 							</div>
 						</div>
